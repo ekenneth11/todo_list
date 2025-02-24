@@ -90,5 +90,5 @@ const TodoList = () => {
 export default TodoList;
 
 //in the future, we add a checkbox for each item in the list, and add a text-decoration: line-through
-//make a drop down option for each headings
+//make a drop down option for each headings make it collapsable
 //change the background for the app
