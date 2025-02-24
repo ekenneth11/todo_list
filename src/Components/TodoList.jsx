@@ -12,6 +12,13 @@ const TodoList = () => {
       //heading: headingInput is just heading pointing the value to headingInput, same with lists
       setHeadingInput('');
     }
+
+  //adding the delete button for heading
+  const handleDeleteTodo = () => {
+    //check if 
+  }
+
+  
   };
   return (
     <>
@@ -41,6 +48,17 @@ const TodoList = () => {
             <div className='heading_todo'>
               <h3>{todo.heading}</h3> {/**This displays the heading */}
               <button className='delete-button-heading' onClick={() => handleDeleteTodo(index)}>Delete Heading</button>
+            </div>
+            <div className='add_list'>
+              <input 
+                type="text"
+                className='list-input'
+                placeholder='Add List'
+                value={listInputs[index] || ''}
+                onChange={(e) => handleListInputChange(index, e.target.value)}
+              />
+              <button className='add-list-button' onClick={() => handleAddList(index)}>Add List</button>
+
             </div>
           </div>
         ))}
