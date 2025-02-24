@@ -29,13 +29,21 @@ const TodoList = () => {
           <button className="add-list-button" 
               onClick={handleAddTodo} //added the onClick function
               >
-            Add Heading</button>
-          
+            Add Heading
+            </button>
         </div>
       </div>
   
       <div className="todo_main">
-        
+        {/**we need to display the todos in this area */}
+        {todos.map((todo, index) => (
+          <div key={index} className='todo-card'>
+            <div className='heading_todo'>
+              <h3>{todo.heading}</h3> {/**This displays the heading */}
+              <button className='delete-button-heading' onClick={() => handleDeleteTodo(index)}>Delete Heading</button>
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );
